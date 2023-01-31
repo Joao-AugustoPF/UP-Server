@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_prova_perguntas",
+  "info": {
+    "displayName": "Pergunta",
+    "icon": "question",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "pergunta": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::prova.prova"
+    },
+    "comentario": {
+      "type": "text"
+    }
+  }
+}

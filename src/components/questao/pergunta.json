@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_questao_perguntas",
+  "info": {
+    "displayName": "pergunta",
+    "icon": "question",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "questao": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::questao.questao"
+    },
+    "comentario": {
+      "type": "text"
+    }
+  }
+}

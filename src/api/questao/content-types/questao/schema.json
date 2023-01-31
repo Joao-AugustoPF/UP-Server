@@ -1,0 +1,96 @@
+{
+  "kind": "collectionType",
+  "collectionName": "questoes",
+  "info": {
+    "singularName": "questao",
+    "pluralName": "questoes",
+    "displayName": "Questão",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Nome da questão"
+    },
+    "banca": {
+      "type": "enumeration",
+      "enum": [
+        "FGV",
+        "Quadrix",
+        "Fepese"
+      ]
+    },
+    "orgao": {
+      "type": "enumeration",
+      "enum": [
+        "CAU SC",
+        "CRM SC",
+        "Delegado",
+        "Governo de Santa Catarina",
+        "OAB",
+        "Prefeitura de Florianópolis"
+      ]
+    },
+    "disciplina": {
+      "type": "enumeration",
+      "enum": [
+        "Direito Administrativo",
+        "Direito Ambiental",
+        "Direito Civil",
+        "Direito Constitucional",
+        "Direito Empresarial",
+        "Direito Penal",
+        "Direito Processual Civil",
+        "Direito Processual Penal",
+        "Direito Processual do Trabalho",
+        "Direito do Trabalho",
+        "Direito Tributário"
+      ]
+    },
+    "cargo": {
+      "type": "enumeration",
+      "enum": [
+        "Advogado",
+        "Advogado Geral da União",
+        "Delegaido de Polícia Civil",
+        "Delegado Federal",
+        "Defensor Público",
+        "Defensor Público da União",
+        "Juiz de Direito",
+        "Juiz Federal",
+        "Juiz do Trabalho",
+        "Procurador Estadual",
+        "Procurador Federal",
+        "Procurador Legislativo",
+        "Procurador Municipal",
+        "Promotor de Justiça"
+      ]
+    },
+    "ano": {
+      "type": "integer",
+      "required": true
+    },
+    "Pergunta": {
+      "displayName": "pergunta",
+      "type": "component",
+      "repeatable": true,
+      "component": "questao.pergunta"
+    },
+    "pdf": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}
